@@ -8,7 +8,7 @@ const Tempo = (props) => {
   return (
     <div>
       <div>{textoDataDinamica} (dinâmica)</div>
-      <div>{props.textoDataEstatica} (estático -- com delay)</div>
+      <div>{props.textoDataEstatica} (estático)</div>
       <Link href="/">
         <a>Acessar página Home</a>
       </Link>
@@ -18,19 +18,15 @@ const Tempo = (props) => {
 
 export const getStaticProps = async () => {
   console.log('> Passando pelo getStaticProps();')
-  console.log('> Adicionando delay de 5 segundos;')
-
-  await delay(5000)
   const dataEstatica = new Date();
   const textoDataEstatica = dataEstatica.toGMTString();
 
   return {
     props: {
       textoDataEstatica
-    }
+    },
+    revalidate: 1
   }
 }
-
-const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
  
 export default Tempo;
