@@ -1,0 +1,25 @@
+{
+  "name": "todo-list-font-end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonatas-ms-student/todo-list-font-end.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonatas-ms-student/todo-list-font-end/issues"
+  },
+  "homepage": "https://github.com/jonatas-ms-student/todo-list-font-end#readme",
+  "dependencies": {
+    "next": "^10.0.9",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
